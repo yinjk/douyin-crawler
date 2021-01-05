@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="signature2.js" type="text/javascript"></script>
+</head>
+<input type="text" name="userId" id="userId"/>
+<button onclick="genSignature()">提交</button>
+<div id="signature"></div>
+
+</body>
+<script>
+    function genSignature() {
+        var userId = document.getElementById("userId").value;
+        var signature = generateSignature(userId);
+        console.log(signature)
+        document.querySelector("#signature").innerHTML = signature;
+    }
+</script>
+</html>
